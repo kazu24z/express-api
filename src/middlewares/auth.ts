@@ -5,7 +5,10 @@ export const authMiddleware = (
   res: Response,
   next: NextFunction
 ) => {
-  if (req.path.startsWith('/login')) {
+  if (
+    req.path.startsWith('/api/login') ||
+    req.path.startsWith('/api/register')
+  ) {
     return next()
   }
   const token = req.headers.authorization
