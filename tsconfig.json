@@ -2,6 +2,7 @@
     "compilerOptions": {
       "module": "commonjs",
       "target": "es6",
+      "typeRoots": ["./types", "./node_modules/@types"],
       "esModuleInterop": true,
       "outDir": "./dist",
       "strict": true,
@@ -10,7 +11,7 @@
         "@/*": ["src/*"]
       }
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "types/express"],
     "exclude": ["node_modules"]
   }
   
